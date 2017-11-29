@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>ROGUELIKE ROULETTE</title>
+</head>
+<body>
+
+<h1>ROGUELIKE ROULETTE</h1>
+<p id="result">WHAT GAME SHALL IT BE</p>
+<button onclick="roll()">ROLL</button>
+
+<script>
+	var roulette=function(games){return games[Math.floor(Math.random()*(games.length +1))];}
+	var roll = function() {
+		var result;
+		while (!result) {
+			result = roulette(['20XX','ISAAC','NECRODANCER','DEAD CELLS','DOWNWELL','GUNGEON','FLINTHOOK','NUCLEAR THRONE','RISK OF RAIN','ROGUE LEGACY','SPELUNKY','ZIGGURAT']);
+		}
+		document.getElementById("result").textContent = result;
+	}
+</script>
+</body>
+</html> 
